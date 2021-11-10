@@ -1,0 +1,2127 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Sarthak  Vajpayee | Hands-on Transformers (Kaggle Google QUEST Q&A Labeling).</title>
+<meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/my_folio/assets/img/favicon.ico">
+<link rel="stylesheet" href="/my_folio/assets/css/main.css">
+
+<link rel="canonical" href="/my_folio/blog/2020/Hands-on-Transformers/">
+
+<!-- JQuery -->
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+
+<!-- Theming-->
+
+  <script src="/my_folio/assets/js/theme.js"></script>
+  <!-- Load DarkMode JS -->
+<script src="/my_folio/assets/js/dark_mode.js"></script>
+
+
+
+
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="/my_folio/">
+       <span class="font-weight-bold">Sarthak</span>   Vajpayee
+      </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/my_folio/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Blog -->
+          <li class="nav-item active">
+            <a class="nav-link" href="/my_folio/blog/">
+              blog
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/my_folio/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/my_folio/publications/">
+                publications
+                
+              </a>
+          </li>
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/my_folio/teaching/">
+                skills
+                
+              </a>
+          </li>
+          
+          
+          
+            <div class = "toggle-container">
+              <a id = "light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+              </a>
+            </div>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Hands-on Transformers (Kaggle Google QUEST Q&A Labeling).</h1>
+    <p class="post-meta">August 1, 2020</p>
+  </header>
+
+  <article class="post-content">
+    <h4 id="part-33-of-transformers-vs-google-quest-qa-labeling-kaggle-top-5">Part 3/3 of Transformers vs Google QUEST Q&amp;A Labeling (Kaggle top 5%).</h4>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2400/1*hOohtF4J9u1updZhHNh9ow.jpeg" />
+    </div>
+</div>
+
+<p><em>This is a 3 part series where we will be going through Transformers, BERT, and a hands-on Kaggle challenge — <a href="https://www.kaggle.com/c/google-quest-challenge/">Google QUEST Q&amp;A Labeling</a> to see Transformers in action (top 4.4% on the leaderboard).
+In this part (3/3) we will be looking at a hands-on project from Google on Kaggle.
+Since this is an NLP challenge, I’ve used transformers in this project. I have not covered transformers in much detail in this part but if you wish you could check out the part 1/3 of this series where I’ve discussed transformers in detail.</em></p>
+
+<p><img src="" alt="" /></p>
+<h2 id="birds-eye-view-of-the-blog">Bird’s eye view of the blog:</h2>
+
+<p>To make the reading easy, I’ve divided the blog into different sub-topics-</p>
+
+<ul>
+  <li>
+    <p>Problem statement and evaluation metrics.</p>
+  </li>
+  <li>
+    <p>About the data.</p>
+  </li>
+  <li>
+    <p>Exploratory Data Analysis (EDA).</p>
+  </li>
+  <li>
+    <p>Modeling (includes data preprocessing).</p>
+  </li>
+  <li>
+    <p>Post-modeling analysis.</p>
+  </li>
+</ul>
+
+<p><img src="" alt="" /></p>
+<h2 id="problem-statement-and-evaluation-metrics">Problem statement and Evaluation metrics:</h2>
+
+<p>Computers are really good at answering questions with single, verifiable answers. But, humans are often still better at answering questions about opinions, recommendations, or personal experiences.</p>
+
+<p>Humans are better at addressing subjective questions that require a deeper, multidimensional understanding of context. Questions can take many forms — some have multi-sentence elaborations, others may be simple curiosity or a fully developed problem. They can have multiple intents, or seek advice and opinions. Some may be helpful and others interesting. Some are simple right or wrong.</p>
+
+<p><img src="" alt="" /></p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2664/1*MKNxCI-qlr_YAhcKowSHkQ.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+Unfortunately, it’s hard to build better subjective question-answering algorithms because of a lack of data and predictive models. That’s why the <a href="https://crowdsource.google.com/">CrowdSource</a> team at Google Research, a group dedicated to advancing NLP and other types of ML science via crowdsourcing, has collected data on a number of these quality scoring aspects.</p>
+
+<p>In this competition, we’re challenged to use this new dataset to build predictive algorithms for different subjective aspects of question-answering. The question-answer pairs were gathered from nearly 70 different websites, in a “common-sense” fashion. The raters received minimal guidance and training and relied largely on their subjective interpretation of the prompts. As such, each prompt was crafted in the most intuitive fashion so that raters could simply use their common-sense to complete the task.</p>
+
+<p>Demonstrating these subjective labels can be predicted reliably can shine a new light on this research area. Results from this competition will inform the way future intelligent Q&amp;A systems will get built, hopefully contributing to them becoming more human-like.</p>
+
+<p><strong>Evaluation metric:</strong> Submissions are evaluated on the mean column-wise <a href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman’s correlation coefficient</a>. The Spearman’s rank correlation is computed for each target column, and the mean of these values is calculated for the submission score.</p>
+
+<p><img src="" alt="" /></p>
+<h2 id="about-the-data">About the data:</h2>
+
+<p>The data for this competition includes questions and answers from various StackExchange properties. Our task is to predict the target values of 30 labels for each question-answer pair.
+The list of 30 target labels is the same as the column names in the sample_submission.csv file. Target labels with the prefix question_ relate to the question_title and/or question_body features in the data. Target labels with the prefix answer_ relate to the answer feature.
+Each row contains a single question and a single answer to that question, along with additional features. The training data contains rows with some duplicated questions (but with different answers). The test data does not contain any duplicated questions.
+Target labels can have continuous values in the range [0,1]. Therefore, predictions must also be in that range.
+The files provided are:</p>
+
+<ul>
+  <li>
+    <p>train.csv — the training data (target labels are the last 30 columns)</p>
+  </li>
+  <li>
+    <p>test.csv — the test set (you must predict 30 labels for each test set row)</p>
+  </li>
+  <li>
+    <p>sample_submission.csv — a sample submission file in the correct format; column names are the 30 target labels</p>
+  </li>
+</ul>
+
+<p>You can check out the dataset using <a href="https://www.kaggle.com/c/google-quest-challenge/data">this</a> link.</p>
+
+<p><img src="" alt="" /></p>
+<h2 id="exploratory-data-analysis-eda"><strong>Exploratory Data Analysis (EDA)</strong></h2>
+
+<p><strong><em>Check-out the notebook with in-depth EDA + Data Scraping (<a href="https://www.kaggle.com/sarthakvajpayee/top-4-4-in-depth-eda-feature-scraping?scriptVersionId=40263047">Kaggle link</a>).</em></strong></p>
+
+<p>The training data contains 6079 listings and each listing has 41 columns. Out of these 41 columns, the first 11 columns/features have to be used as the input and the last 30 columns/features are the target predictions.
+Let’s take a look at the input and target labels:</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2456/1*q5AIFvq5vvoWICyjktZtAg.png" />
+    </div>
+</div>
+
+<p>The output features are all of the float types between 0 and 1.</p>
+
+<p>Let’s explore the input labels one by one.</p>
+
+<p><img src="" alt="" /></p>
+<h3 id="qa_id">qa_id</h3>
+
+<p>Question answer ID represents the id of a particular data point in the given dataset. Each data point has a unique qa_id. This feature is not to be used for training and will be used later while submitting the output to Kaggle.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/5036/1*AaPKUzHR6jKegZ7ku_INeg.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" /></p>
+<h3 id="question_title">question_title</h3>
+
+<p>This is a string data type feature that holds the title of the question asked.
+For the analysis of question_title, I’ll be plotting a histogram of the number of words in this feature.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3448/1*Bio022v9rxBg8mhGhLNOjA.png" />
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2760/1*h2VPrcBPqpLrTVOAXO8jMw.png" />
+    </div>
+</div>
+
+<p>From the analysis, it is evident that:</p>
+<ul>
+  <li>Most of the question_title features have a word length of around 9.</li>
+  <li>The minimum question length is 2.</li>
+  <li>The maximum question length is 28.</li>
+  <li>50% of question_title have lengths between 6 and 11.</li>
+  <li>25% of question_title have lengths between 2 and 6.</li>
+  <li>25% of question_title have lengths between 11 and 28.</li>
+</ul>
+
+<p><img src="" alt="" /></p>
+<h3 id="question_body">question_body</h3>
+
+<p>This is again a string data type feature that holds the detailed text of the question asked.
+For the analysis of question_body, I’ll be plotting a histogram of the number of words in this feature.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3016/1*vck8a5DcxH6JSQIwvW-COA.png" />
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2788/1*J_p2iMsZ8wLfxFlC7acrfQ.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+From the analysis, it is evident that:</p>
+<ul>
+  <li>Most of the question_body features have a word length of around 93.</li>
+  <li>The minimum question length is 1.</li>
+  <li>The maximum question length is 4666.</li>
+  <li>50% of question_title have lengths between 55 and 165.</li>
+  <li>25% of question_title have lengths between 1 and 55.</li>
+  <li>25% of question_title have lengths between 165 and 4666.</li>
+</ul>
+
+<p>The distribution looks like a power-law distribution, it can be converted to a gaussian distribution using log and then used as an engineered feature.</p>
+
+<p><img src="" alt="" /></p>
+<h3 id="question_user_name">question_user_name</h3>
+
+<p>This is a string data type feature that denotes the name of the user who asked the question.
+For the analysis of question_answer, I’ll be plotting a histogram of the number of words in this feature.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3612/1*y2lMiIxsJae7PqDLCZLruw.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+I did not find this feature of much use therefore I won’t be using this for modeling.</p>
+
+<p><img src="" alt="" /></p>
+<h3 id="question_user_page">question_user_page</h3>
+
+<p>This is a string data type feature that holds the URL to the profile page of the user who asked the question.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/4196/1*AEIgkWtuReLYpi4vO1jczQ.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+On the profile page, I noticed 4 useful features that could be used and should possibly contribute to good predictions. The features are:</p>
+<ul>
+  <li>Reputation: Denotes the reputation of the user.</li>
+  <li>gold_score: The number of gold medals awarded.</li>
+  <li>silver_score: The number of silver medals awarded.</li>
+  <li>bronze_score: The number of bronze medals awarded.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td><td class="code"><pre> <span class="c1"># code for scraping the data. Since all of the urls are of stackoverflow, they have the same html hie rarchy.
+</span><span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="k">def</span> <span class="nf">get_user_rating</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+  <span class="k">try</span><span class="p">:</span>
+    <span class="n">get</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">src</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">get</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+    <span class="n">reputation</span><span class="p">,</span> <span class="n">gold</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="n">silver</span><span class="p">,</span> <span class="n">bronze</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="n">template</span> <span class="o">=</span> <span class="n">src</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"div"</span><span class="p">,</span> <span class="n">class_</span> <span class="o">=</span> <span class="s">'grid--cell fl-shrink0 ws2 overflow-hidden'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">reputation</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'grid--cell fs-title fc-dark'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)))</span>
+    <span class="n">gold</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'grid ai-center s-badge s-badge__gold'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)))</span>
+    <span class="n">silver</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'grid ai-center s-badge s-badge__silver'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)))</span>
+    <span class="n">bronze</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'grid ai-center s-badge s-badge__bronze'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">().</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)))</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[</span><span class="n">reputation</span><span class="p">,</span> <span class="n">gold</span><span class="p">,</span> <span class="n">silver</span><span class="p">,</span> <span class="n">bronze</span><span class="p">]</span>
+  <span class="k">except</span><span class="p">:</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="n">nan</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span> <span class="c1"># return np.nan if the code runs into some error like page not found
+</span>
+  <span class="k">return</span> <span class="n">output</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s">'answer_user_page'</span><span class="p">]):</span>
+  <span class="n">data</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">get_user_rating</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'reputation'</span><span class="p">,</span> <span class="s">'gold'</span><span class="p">,</span> <span class="s">'silver'</span><span class="p">,</span> <span class="s">'bronze'</span><span class="p">]</span>
+<span class="n">scraped</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lens</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">scraped</span><span class="p">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s">'scraped_score.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p><img src="" alt="" /></p>
+<h3 id="answer">answer</h3>
+
+<p>This is again a string data type feature that holds the detailed text of the answer to the question.
+For the analysis of <em>answer</em>, I’ll be plotting a histogram of the number of words in this feature.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3312/1*hoFuOPl3B9cNz1TSeHLzrA.png" />
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2728/1*SPMSqpz78qsCvfOmyD5icg.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+From the analysis, it is evident that:</p>
+<ul>
+  <li>Most of the question_body features have a word length of around 143.</li>
+  <li>The minimum question length is 2.</li>
+  <li>The maximum question length is 8158.</li>
+  <li>50% of question_title have lengths between 48 and 170.</li>
+  <li>25% of question_title have lengths between 2 and 48.</li>
+  <li>25% of question_title have lengths between 170 and 8158.</li>
+</ul>
+
+<p>This distribution also looks like a power-law distribution, it can also be converted to a gaussian distribution using log and then used as an engineered feature.</p>
+
+<p><img src="" alt="" /></p>
+<h3 id="answer_user_name">answer_user_name</h3>
+
+<p>This is a string data type feature that denotes the name of the user who answered the question.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3024/1*8am6v-oUIg_XKA1d6LpzBQ.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+I did not find this feature of much use therefore I won’t be using this for modeling.</p>
+
+<p><img src="" alt="" /></p>
+<h3 id="answer_user_page">answer_user_page</h3>
+
+<p>This is a string data type feature similar to the feature “question_user_page” that holds the URL to the profile page of the user who asked the question.</p>
+
+<p>I also used the URL in this feature to scrape the external data from the user’s profile page, similar to what I did for the feature ‘question_user_page’.</p>
+
+<p><img src="" alt="" /></p>
+<h3 id="url">url</h3>
+
+<p>This feature holds the URL of the question and answers page on StackExchange or StackOverflow. Below I’ve printed the first 10 <em>url</em> data-points from train.csv</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3656/1*0_RcKZAy01R7OxZ7BaVsCQ.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+One thing to notice is that this feature lands us on the question-answer page, and that page may usually contain a lot more data like comments, upvotes, other answers, etc. which can be used for generating more features if the model does not perform well due to fewer data in train.csv
+Let’s see the data is present and what additional data can be scraped from the question-answer page.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3200/1*HikC8L5q8zm8GFasu4gM1Q.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+In the snapshot attached above, <em>Post 1</em> and <em>Post 2</em> contain the answers, upvotes, and comments for the question asked in decreasing order of upvotes. The post with a green tick is the one containing the answer provided in the train.csv file.</p>
+
+<p>Each question may have more than one answer. We can scrape these answers and use them as additional data.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3096/1*f_qUPbojaSFLJ38d_LPzhA.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+The snapshot above defines the anatomy of a post. We can scrape useful features like <em>upvotes</em> and <em>comments</em> and use them as additional data.</p>
+
+<p>Below is the code for scraping the data from the URL page.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+</pre></td><td class="code"><pre><span class="c1"># Here is the code. Since all of the urls are of stackoverflow, they have the same html hierarchy.
+</span>  <span class="k">def</span> <span class="nf">get_answers</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+      <span class="n">get</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+      <span class="n">src</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">get</span><span class="p">,</span> <span class="s">'html.parser'</span><span class="p">)</span>
+      <span class="n">upvotes</span><span class="p">,</span> <span class="n">posts</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+      <span class="n">correct_ans</span><span class="p">,</span> <span class="n">comments</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[]</span>
+      <span class="n">new_features</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="n">post_layout</span> <span class="o">=</span> <span class="n">src</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"div"</span><span class="p">,</span> <span class="n">class_</span> <span class="o">=</span> <span class="s">'post-layout'</span><span class="p">)</span>
+      <span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">post_layout</span><span class="p">)</span>
+      <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">post_layout</span><span class="p">[:</span><span class="n">l</span><span class="p">]:</span>
+        <span class="n">posts</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'div'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'post-text'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">())</span>
+        <span class="n">upvotes</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"div"</span><span class="p">,</span> <span class="n">class_</span> <span class="o">=</span> <span class="s">'js-vote-count grid--cell fc-black-500 fs-title g rid fd-column ai-center'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="n">get</span><span class="p">(</span><span class="s">'data-value'</span><span class="p">)))</span>
+        <span class="n">correct_ans</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">"div"</span><span class="p">,</span> <span class="n">class_</span> <span class="o">=</span> <span class="s">'js-accepted-answer-indicator grid--cell fc-g reen-500 ta-center py4'</span><span class="p">)))</span>
+        <span class="n">comments</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">i</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">p</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'span'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s">'comment-copy'</span><span class="p">)]))</span>
+
+      <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">correct_ans</span><span class="p">)</span>
+      <span class="n">new_features</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">upvotes</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="n">idx</span><span class="p">))</span>
+      <span class="n">new_features</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">comments</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="n">idx</span><span class="p">))</span>
+      <span class="k">del</span> <span class="n">posts</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+      <span class="k">if</span> <span class="n">l</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">k</span><span class="o">=</span><span class="n">l</span>
+      <span class="k">else</span><span class="p">:</span>
+        <span class="n">k</span><span class="o">=</span><span class="mi">3</span>
+      <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">posts</span><span class="p">[:</span><span class="n">k</span><span class="p">],</span> <span class="n">comments</span><span class="p">[:</span><span class="n">k</span><span class="p">]):</span>
+        <span class="n">new_features</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">new_features</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+      <span class="k">for</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">posts</span><span class="p">[:</span><span class="mi">3</span><span class="o">-</span><span class="n">k</span><span class="p">],</span> <span class="n">comments</span><span class="p">[:</span><span class="mi">3</span><span class="o">-</span><span class="n">k</span><span class="p">]):</span>
+        <span class="n">new_features</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
+        <span class="n">new_features</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
+
+      <span class="k">return</span> <span class="n">new_features</span>
+
+    <span class="k">except</span><span class="p">:</span>
+      <span class="k">return</span> <span class="p">[</span><span class="n">np</span><span class="p">.</span><span class="n">nan</span><span class="p">]</span><span class="o">*</span><span class="mi">8</span> <span class="c1"># return np.nan if the code runs into some error like page not found
+</span>
+<span class="c1"># collecting the data
+</span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">train</span><span class="p">[</span><span class="s">'url'</span><span class="p">]):</span>
+  <span class="n">data</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">get_answers</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+
+<span class="c1"># Saving as dataframe
+</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s">'upvotes'</span><span class="p">,</span> <span class="s">'comments_0'</span><span class="p">,</span> <span class="s">'answer_1'</span><span class="p">,</span> <span class="s">'comment_1'</span><span class="p">,</span> <span class="s">'answer_2'</span><span class="p">,</span> <span class="s">'comment_2'</span><span class="p">,</span> <span class="s">'answer_3'</span><span class="p">,</span> <span class="s">'comment_3'</span><span class="p">]</span>
+<span class="n">scraped</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">lens</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">scraped</span><span class="p">.</span><span class="n">to_csv</span><span class="p">(</span><span class="sa">f</span><span class="s">'scraped_posts.csv'</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>There are 8 new features that I’ve scraped-</p>
+<ul>
+  <li>upvotes: The number of upvotes on the provided answer.</li>
+  <li>comments_0: Comments to the provided answer.</li>
+  <li>answer_1: Most voted answer apart from the one provided.</li>
+  <li>comment_1: Top comment to answer_1.</li>
+  <li>answer_2: Second most voted answer.</li>
+  <li>comment_2: Top comment to answer_2.</li>
+  <li>answer_3: Third most voted answer.</li>
+  <li>comment_3: Top comment to answer_3.</li>
+</ul>
+
+<p><img src="" alt="" /></p>
+<h3 id="category">category</h3>
+
+<p>This is a categorical feature that tells the categories of question and answers pairs. Below I’ve printed the first 10 <em>category</em> data-points from train.csv</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2724/1*ZVyREoM-KJIonAMNurlWZQ.png" />
+    </div>
+</div>
+
+<p>Below is the code for plotting a Pie chart of category.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2976/1*sQeMNBXBG_9wjgL5RwMuKA.png" />
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2740/1*raqsI9DfgAi-X9DEteDG-g.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+The chart tells us that most of the points belong to the category *TECHNOLOGY *and least belong to *LIFE_ARTS *(709 out of 6079).</p>
+
+<p><img src="" alt="" /></p>
+<h3 id="host">host</h3>
+
+<p>This feature holds the host or domain of the question and answers page on StackExchange or StackOverflow. Below I’ve printed the first 10 <em>host</em> data-points from train.csv</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3052/1*Z2qQIIdk3tS1TTPUjbjesQ.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+Below is the code for plotting a bar graph of unique hosts.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2952/1*MEYLevz8Mb4jEDi45l3CHQ.png" />
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2720/1*AC4MzE30X4w-jOdZUKDWPw.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+It seems there are not many but just 63 different subdomains present in the training data. Most of the data points are from StackOverflow.com whereas least from meta.math.stackexchange.com</p>
+
+<p><img src="" alt="" /></p>
+<h3 id="target-values">Target values</h3>
+
+<p>Let’s analyze the target values that we need to predict. But first, for the sake of a better interpretation, please check out the full dataset on kaggle using <a href="https://www.kaggle.com/c/google-quest-challenge/data?select=train.csv">this link</a>.</p>
+
+<p>Below is the code block displaying the statistical description of the target values. These are only the first 6 features out of all the 30 features.
+The values of all the features are of type float and are between 0 and 1.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/4624/1*vIH-FKw4qnebXL4HnYJuSw.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+Notice the second code block which displays the unique values present in the dataset. There are just 25 unique values between 0 and 1. This could be useful later while fine-tuning the code.</p>
+
+<p>Finally, let’s check the distribution of the target features and their correlation.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2740/1*K33iaHeCjBKwQiAE6aW2Yw.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" /></p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2850/1*a6rTLOBC2RuXYBDZExY9Hw.png" />
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2836/1*olpEN_FeEg1ViqLw_jJV7w.png" />
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2190/1*rJGjCI31Tu4yM3bi6vfeAw.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" /></p>
+<h2 id="modeling">Modeling</h2>
+
+<p><img src="" alt="" /></p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2850/1*QdslcbSWBOdPju1zpqycgQ.jpeg" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+Now that we know our data better through EDA, let’s begin with modeling. Below are the subtopics that we’ll go through in this section-</p>
+
+<ul>
+  <li>
+    <p><strong>Overview of the architecture:</strong> Quick rundown of the ensemble architecture and it’s different components.</p>
+  </li>
+  <li>
+    <p><strong>Base learners:</strong> Overview of the base learners used in the ensemble.</p>
+  </li>
+  <li>
+    <p><strong>Preparing the data:</strong> Data cleaning and preparation for modeling.</p>
+  </li>
+  <li>
+    <p><strong>Ensembling:</strong> Creating models for training, and predicting. Pipelining the data preparation, model training, and model prediction steps.</p>
+  </li>
+  <li>
+    <p><strong>Getting the scores from Kaggle:</strong> Submitting the predicted target values for test data on Kaggle and generating a leaderboard score to see how well the ensemble did.</p>
+  </li>
+</ul>
+
+<p>I tried various deep neural network architectures with GRU, Conv1D, Dense layers, and with different features for the competition but, an ensemble of 8 transformers (as shown above) seems to work the best.
+In this part, we will be focusing on the final architecture of the ensemble used and for the other baseline models that I experimented with, you can check out my github repo.</p>
+<blockquote>
+  <p><strong>Overview of the architecture:</strong></p>
+</blockquote>
+
+<p>Remember our task was for a given <strong><em>question_title, question_body,</em></strong> and <strong><em>answer</em></strong>, we had to predict 30 target labels.
+Now out of these 30 target labels, the first 21 are related to the <strong><em>question_title</em></strong> and <strong><em>question_body</em></strong> and have no connection to the <strong><em>answer</em></strong> whereas the last 9 target labels are related to the <strong><em>answer</em></strong> only but out of these 9, some of them also take <strong><em>question_title</em></strong> and <strong><em>question_body</em></strong> into the picture.
+Eg. features like <em>answer_relevance</em> and <em>answer_satisfaction</em> can only be rated by looking at both the question and answer.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2868/1*JsrdmWw2Jwa9uNN8c5LdNw.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+With some experimentation, I found that the base-learner (BERT_base) performs exceptionally well in predicting the first 21 target features (related to questions only) but does not perform that well in predicting the last 9 target features. Taking note of this, I constructed 3 dedicated base-learners and 2 different datasets to train them.</p>
+
+<ol>
+  <li>
+    <p>The first base-learner was dedicated to predicting the question-related features (first 21) only. The dataset used for training this model consisted of features <strong><em>question_title</em></strong> and <strong><em>question_body</em></strong> only.</p>
+  </li>
+  <li>
+    <p>The second base-learner was dedicated to predicting the answer-related features (last 9) only. The dataset used for training this model consisted of features <strong><em>question_title</em></strong>, <strong><em>question_body,</em></strong> and <strong><em>answer</em></strong>.</p>
+  </li>
+  <li>
+    <p>The third base-learner was dedicated to predicting all the 30 features. The dataset used for training this model again consisted of features <strong><em>question_title</em></strong>, <strong><em>question_body,</em></strong> and <strong><em>answer</em></strong>.</p>
+  </li>
+</ol>
+
+<p>To make the architecture even more robust, I used 3 different types of base learners — <strong>BERT, RoBERTa, and XLNet.</strong>
+We will be going through these different transformer models later in this blog.</p>
+
+<p>In the ensemble diagram above, we can see —</p>
+
+<ul>
+  <li>
+    <p>The 2 datasets consisting of <strong>[question_title + question_body]</strong> and <strong>[question_title + question_body + answer]</strong> being used separately to train different base learners.</p>
+  </li>
+  <li>
+    <p>Then we can see the 3 different base learners <strong>(BERT, RoBERTa, and XLNet)</strong> dedicated to predicting the <strong>question-related features only</strong> (first 21) colored in blue, using the dataset <strong>[question_title + question_body]</strong></p>
+  </li>
+  <li>
+    <p>Next, we can see the 3 different base learners <strong>(BERT, RoBERTa, and XLNet)</strong> dedicated to predicting the <strong>answer-related features only</strong> (last 9) colored in green, using the dataset <strong>[question_title + question_body + answer].</strong></p>
+  </li>
+  <li>
+    <p>Finally, we can see the 2 different base learners <strong>(BERT, and RoBERTa)</strong> dedicated to predicting <strong>all the 30 features</strong> colored in red, using the dataset <strong>[question_title + question_body + answer].</strong></p>
+  </li>
+</ul>
+
+<p>In the next step, the predicted data from models dedicated to predicting the <strong>question-related features only</strong> (denoted as <strong><em>bert_pred_q, roberta_pred_q, xlnet_pred_q</em></strong>) and the predicted data from models dedicated to predicting the <strong>answer-related features only</strong> (denoted as <strong><em>bert_pred_a, roberta_pred_a, xlnet_pred_a</em></strong>) is collected and concatenated column-wise which leads to a predicted data with all the 30 features. These concatenated features are denoted as <strong><em>xlnet_concat, roberta_concat,</em></strong> and <strong><em>bert_concat.</em></strong></p>
+
+<p>Similarly, the predicted data from models dedicated to predicting <strong>all the 30 features</strong> (denoted as <strong><em>bert_qa, roberta_qa</em></strong>) is collected. Notice that I’ve not used the XLNet model here for predicting all the 30 features because the scores were not up to the mark.</p>
+
+<p>Finally, after collecting all the different predicted data — <strong>[xlnet_concat, roberta_concat, bert_concat, bert_qa, and roberta_qa],</strong> the final value is calculated by taking the average of all the different predicted values.</p>
+<blockquote>
+  <p><strong>Base learners</strong></p>
+</blockquote>
+
+<p>Now we will take a look at the 3 different transformer models that were used as base learners.</p>
+
+<p><strong>1. bert_base_uncased:</strong></p>
+
+<p><a href="https://arxiv.org/abs/1810.04805">Bert</a> was proposed by Google AI in late 2018 and since then it has become state-of-the-art for a wide spectrum of NLP tasks.
+It uses an architecture derived from transformers pre-trained over a lot of unlabeled text data to learn a language representation that can be used to fine-tune for specific machine learning tasks. BERT outperformed the NLP state-of-the-art on several challenging tasks. This performance of BERT can be ascribed to the transformer’s encoder architecture, unconventional training methodology like the Masked Language Model (MLM), and Next Sentence Prediction (NSP) and the humungous amount of text data (all of Wikipedia and book corpus) that it is trained on. BERT comes in different sizes but for this challenge, I’ve used <em>bert_base_uncased.</em></p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*nbFb82C1avPQB6aH.png" />
+    </div>
+</div>
+
+<p>The architecture of <em>bert_base_uncased</em> consists of 12 encoder cells with 8 attention heads in each encoder cell.
+It takes an input of size 512 and returns 2 values by default, the output corresponding to the first input token [CLS] which has a dimension of 786 and another output corresponding to all the 512 input tokens which have a dimension of (512, 768) aka pooled_output.
+But apart from these, we can also access the hidden states returned by each of the 12 encoder cells by passing <strong><em>output_hidden_states=True</em></strong> as one of the parameters.
+BERT accepts several sets of input, for this challenge, the input I’ll be using will be of 3 types:</p>
+
+<ul>
+  <li>
+    <p><strong><em>input_ids</em></strong>: The token embeddings are numerical representations of words in the input sentence. There is also something called sub-word tokenization that BERT uses to first breakdown larger or complex words into simple words and then convert them into tokens. For example, in the above diagram look how the word ‘playing’ was broken into ‘play’ and ‘##ing’ before generating the token embeddings. This tweak in tokenization works wonders as it utilized the sub-word context of a complex word instead of just treating it like a new word.</p>
+  </li>
+  <li>
+    <p><strong><em>attention_mask</em></strong>: The segment embeddings are used to help BERT distinguish between the different sentences in a single input. The elements of this embedding vector are all the same for the words from the same sentence and the value changes if the sentence is different.
+Let’s consider an example: Suppose we want to pass the two sentences <em>“I have a pen”</em> and <em>“The pen is red”</em> to BERT. The tokenizer will first tokenize these sentences as:
+<strong>[‘[CLS]’, ‘I’, ‘have’, ‘a’, ‘pen’, ‘[SEP]’, ‘the’, ‘pen’, ‘is’, ‘red’, ‘[SEP]’]</strong>
+And the segment embeddings for these will look like:
+<strong>[0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1].</strong>
+Notice how all the elements corresponding to the word in the first sentence have the same element <strong>0</strong> whereas all the elements corresponding to the word in the second sentence have the same element <strong>1</strong>.</p>
+  </li>
+  <li>
+    <p><strong><em>token_type_ids:</em></strong> The mask tokens that help BERT to understand what all input words are relevant and what all are just there for padding.
+Since BERT takes a 512-dimensional input, and suppose we have an input of 10 words only. To make the tokenized words compatible with the input size, we will add padding of size 512–10=502 at the end. Along with the padding, we will generate a mask token of size 512 in which the index corresponding to the relevant words will have <strong>1</strong>s and the index corresponding to padding will have <strong>0</strong>s.</p>
+  </li>
+</ul>
+
+<p><strong>2. XLNet_base_cased:</strong></p>
+
+<p><a href="https://arxiv.org/abs/1906.08237">XLNet</a> was proposed by Google AI Brain team and researchers at CMU in mid-2019. Its architecture is larger than BERT and uses an improved methodology for training. It is trained on larger data and shows better performance than BERT in many language tasks. The conceptual difference between BERT and XLNet is that while training <strong>BERT</strong>, the words are predicted in an order such that the previous predicted word contributes to the prediction of the next word whereas, <strong>XLNet</strong> learns to predict the words in an arbitrary order but in an autoregressive manner (not necessarily left-to-right).</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2000/0*V2CD2JYdmFiaPTIa" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+This helps the model to learn bidirectional relationships and therefore better handles dependencies and relations between words.
+In addition to the training methodology, XLNet uses Transformer XL based architecture and 2 main key ideas: <em>relative positional embeddings</em> and the <em>recurrence mechanism</em> which showed good performance even in the absence of permutation-based training.
+XLNet was trained with over 130 GB of textual data and 512 TPU chips running for 2.5 days, both of which are much larger than BERT.</p>
+
+<p>For XLNet, I’ll be using only <strong>input_ids</strong> and <strong>attention_mask</strong> as input.</p>
+
+<p><img src="" alt="" />
+<strong>3. RoBERTa_base:</strong></p>
+
+<p>RoBERTa was proposed by Facebook in mid-2019. It is a robustly optimized method for pretraining natural language processing (NLP) systems that improve on BERT’s self-supervised method.
+RoBERTa builds on BERT’s language masking strategy, wherein the system learns to predict intentionally hidden sections of text within otherwise unannotated language examples. RoBERTa modifies key hyperparameters in BERT, including removing BERT’s Next Sentence Prediction (NSP) objective, and training with much larger mini-batches and learning rates. This allows RoBERTa to improve on the masked language modeling objective compared with BERT and leads to better downstream task performance. RoBERTa was also trained on more data than BERT and for a longer amount of time. The dataset used was from existing unannotated NLP data sets as well as CC-News, a novel set drawn from public news articles.</p>
+
+<p>For RoBERTa_base, I’ll be using only <strong>input_ids</strong> and <strong>attention_mask</strong> as input.</p>
+
+<p><strong><em>Finally here is the comparison of BERT, XLNet, and RoBERTa:</em></strong></p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2436/1*lNiXASsDWI86aMKZihMC1Q.png" />
+    </div>
+</div>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://miro.medium.com/max/1050/0*EfEZgjlXlGl0sXjG.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" /></p>
+<blockquote>
+  <p><strong>Preparing the data</strong></p>
+</blockquote>
+
+<p>Now that we have gained some idea about the architecture let’s see how to prepare the data for the base learners.</p>
+
+<ul>
+  <li>As a preprocessing step, I have just treated the HTML syntax present in the features. I used html.unescape() to extract the text from HTML DOM elements.
+In the code snippet below, the function <strong>get_data()</strong> reads the train and test data and applies the preprocessing to the features <strong><em>question_title, question_body,</em></strong> and <strong><em>answer.</em></strong></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">get_data</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'getting test and train data...'</span><span class="p">)</span>
+    <span class="c1"># reading the data into dataframe using pandas
+</span>    <span class="n">path</span> <span class="o">=</span> <span class="s">'../input/google-quest-challenge/'</span>
+    <span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s">'train.csv'</span><span class="p">)</span>
+    <span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s">'test.csv'</span><span class="p">)</span>
+    <span class="n">submission</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="s">'sample_submission.csv'</span><span class="p">)</span>
+
+    <span class="c1"># Selecting data for training and testing
+</span>    <span class="n">y</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">train</span><span class="p">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">11</span><span class="p">:]]</span> <span class="c1"># storing the target values in y
+</span>    <span class="n">X</span> <span class="o">=</span> <span class="n">train</span><span class="p">[[</span><span class="s">'question_title'</span><span class="p">,</span> <span class="s">'question_body'</span><span class="p">,</span> <span class="s">'answer'</span><span class="p">]]</span>
+    <span class="n">X_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[[</span><span class="s">'question_title'</span><span class="p">,</span> <span class="s">'question_body'</span><span class="p">,</span> <span class="s">'answer'</span><span class="p">]]</span>
+
+    <span class="c1"># Cleaning the data
+</span>    <span class="n">X</span><span class="p">.</span><span class="n">question_body</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">question_body</span><span class="p">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">unescape</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">.</span><span class="n">question_title</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">question_title</span><span class="p">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">unescape</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">.</span><span class="n">answer</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">answer</span><span class="p">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">unescape</span><span class="p">)</span>
+
+    <span class="n">X_test</span><span class="p">.</span><span class="n">question_body</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">.</span><span class="n">question_body</span><span class="p">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">unescape</span><span class="p">)</span>
+    <span class="n">X_test</span><span class="p">.</span><span class="n">question_title</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">.</span><span class="n">question_title</span><span class="p">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">unescape</span><span class="p">)</span>
+    <span class="n">X_test</span><span class="p">.</span><span class="n">answer</span> <span class="o">=</span> <span class="n">X_test</span><span class="p">.</span><span class="n">answer</span><span class="p">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">unescape</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<ul>
+  <li>The next step was to create <strong><em>input_ids, attention_masks,</em></strong> and <strong><em>token_type_ids</em></strong> from the input sentence.
+In the code snippet below, the function <strong>get_tokenizer()</strong> collects pre-trained tokenizer for the different base_learners.
+The second function <strong>fix_length()</strong> goes through the generated question tokens and answer tokens and makes sure that the maximum number of tokens is 512. The steps for fixing the number of tokens are as follows:</li>
+  <li>If the input sentence has the number of tokens &gt; 512, the sentence is trimmed down to 512.</li>
+  <li>To trim the number of tokens, 256 tokens from the beginning and 256 tokens from the end are kept and the remaining tokens are dropped.</li>
+  <li>For example, suppose an answer has 700 tokens, to trim this down to 512, 256 tokens from the beginning are taken and 256 tokens from the end are taken and concatenated to make 512 tokens. The remaining [700-(256+256) = 288] tokens that are in the middle of the answer are dropped.</li>
+  <li>The logic makes sense because in a large text, the beginning part usually describes what the text is all about and the end part describes the conclusion of the text.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+</pre></td><td class="code"><pre> <span class="k">def</span> <span class="nf">get_tokenizer</span><span class="p">(</span><span class="n">model_name</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'getting tokenizer for </span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s">...'</span><span class="p">)</span>
+     <span class="k">if</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s">'xlnet-base-cased'</span><span class="p">:</span>
+         <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">XLNetTokenizer</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">'xlnet-base-cased'</span><span class="p">)</span>
+     <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s">'roberta-base'</span><span class="p">:</span>
+         <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">RobertaTokenizer</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">'roberta-base'</span><span class="p">)</span>
+     <span class="k">elif</span> <span class="n">model_name</span> <span class="o">==</span> <span class="s">'bert-base-uncased'</span><span class="p">:</span>
+         <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">BertTokenizer</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">'bert-base-uncased'</span><span class="p">)</span>
+
+     <span class="k">return</span> <span class="n">tokenizer</span>
+
+ <span class="k">def</span> <span class="nf">fix_length</span><span class="p">(</span><span class="n">tokens</span><span class="p">,</span> <span class="n">max_sequence_length</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">q_max_len</span><span class="o">=</span><span class="mi">254</span><span class="p">,</span> <span class="n">a_max_len</span><span class="o">=</span><span class="mi">254</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s">'questions'</span><span class="p">):</span>
+     <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s">'questions'</span><span class="p">:</span>
+         <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
+         <span class="k">if</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="n">max_sequence_length</span><span class="p">:</span>
+             <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[:</span><span class="n">max_sequence_length</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+         <span class="k">return</span> <span class="n">tokens</span>
+
+     <span class="k">else</span><span class="p">:</span>
+         <span class="n">question_tokens</span><span class="p">,</span> <span class="n">answer_tokens</span> <span class="o">=</span> <span class="n">tokens</span>
+         <span class="n">q_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">question_tokens</span><span class="p">)</span>
+         <span class="n">a_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">answer_tokens</span><span class="p">)</span>
+         <span class="k">if</span> <span class="n">q_len</span> <span class="o">+</span> <span class="n">a_len</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="n">max_sequence_length</span><span class="p">:</span>
+             <span class="k">if</span> <span class="n">a_max_len</span> <span class="o">&lt;=</span> <span class="n">a_len</span> <span class="ow">and</span> <span class="n">q_max_len</span> <span class="o">&lt;=</span> <span class="n">q_len</span><span class="p">:</span>
+                 <span class="n">q_new_len_head</span> <span class="o">=</span> <span class="n">q_max_len</span><span class="o">//</span><span class="mi">2</span>
+                 <span class="n">question_tokens</span> <span class="o">=</span> <span class="n">question_tokens</span><span class="p">[:</span><span class="n">q_new_len_head</span><span class="p">]</span> <span class="o">+</span> <span class="n">question_tokens</span><span class="p">[</span><span class="o">-</span><span class="n">q_new_len_head</span><span class="p">:]</span>
+                 <span class="n">a_new_len_head</span> <span class="o">=</span> <span class="n">a_max_len</span><span class="o">//</span><span class="mi">2</span>
+                 <span class="n">answer_tokens</span> <span class="o">=</span> <span class="n">answer_tokens</span><span class="p">[:</span><span class="n">a_new_len_head</span><span class="p">]</span> <span class="o">+</span> <span class="n">answer_tokens</span><span class="p">[</span><span class="o">-</span><span class="n">a_new_len_head</span><span class="p">:]</span>
+             <span class="k">elif</span> <span class="n">q_len</span> <span class="o">&lt;=</span> <span class="n">a_len</span> <span class="ow">and</span> <span class="n">q_len</span> <span class="o">&lt;</span> <span class="n">q_max_len</span><span class="p">:</span>
+                 <span class="n">a_max_len</span> <span class="o">=</span> <span class="n">a_max_len</span> <span class="o">+</span> <span class="p">(</span><span class="n">q_max_len</span> <span class="o">-</span> <span class="n">q_len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                 <span class="n">a_new_len_head</span> <span class="o">=</span> <span class="n">a_max_len</span><span class="o">//</span><span class="mi">2</span>
+                 <span class="n">answer_tokens</span> <span class="o">=</span> <span class="n">answer_tokens</span><span class="p">[:</span><span class="n">a_new_len_head</span><span class="p">]</span> <span class="o">+</span> <span class="n">answer_tokens</span><span class="p">[</span><span class="o">-</span><span class="n">a_new_len_head</span><span class="p">:]</span>
+             <span class="k">elif</span> <span class="n">a_len</span> <span class="o">&lt;</span> <span class="n">q_len</span><span class="p">:</span>
+                 <span class="n">q_max_len</span> <span class="o">=</span> <span class="n">q_max_len</span> <span class="o">+</span> <span class="p">(</span><span class="n">a_max_len</span> <span class="o">-</span> <span class="n">a_len</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                 <span class="n">q_new_len_head</span> <span class="o">=</span> <span class="n">q_max_len</span><span class="o">//</span><span class="mi">2</span>
+                 <span class="n">question_tokens</span> <span class="o">=</span> <span class="n">question_tokens</span><span class="p">[:</span><span class="n">q_new_len_head</span><span class="p">]</span> <span class="o">+</span> <span class="n">question_tokens</span><span class="p">[</span><span class="o">-</span><span class="n">q_new_len_head</span><span class="p">:]</span>
+
+     <span class="k">return</span> <span class="n">question_tokens</span><span class="p">,</span> <span class="n">answer_tokens</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Next is the code block for generating the <strong>input_ids, attention_masks,</strong> and <strong>token_type_ids.</strong> I’ve used a condition that checks if the function needs to return the generated data for base learners relying on the dataset <strong>[question_title + question_body]</strong> or the dataset <strong>[question_title + question_body + answer].</strong></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+</pre></td><td class="code"><pre> <span class="k">def</span> <span class="nf">transformer_inputs</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">question</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s">'questions'</span><span class="p">,</span> <span class="n">MAX_SEQUENCE_LENGTH</span> <span class="o">=</span> <span class="mi">512</span><span class="p">):</span>
+
+     <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s">'questions'</span><span class="p">:</span>
+         <span class="n">question</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s"> [SEP] </span><span class="si">{</span><span class="n">question</span><span class="si">}</span><span class="s">"</span>
+         <span class="n">question_tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+         <span class="n">question_tokens</span> <span class="o">=</span> <span class="n">fix_length</span><span class="p">(</span><span class="n">question_tokens</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="n">model_type</span><span class="p">)</span>
+         <span class="n">ids_q</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="n">convert_tokens_to_ids</span><span class="p">([</span><span class="s">"[CLS]"</span><span class="p">]</span> <span class="o">+</span> <span class="n">question_tokens</span><span class="p">)</span>
+         <span class="n">padded_ids</span> <span class="o">=</span> <span class="p">(</span><span class="n">ids_q</span> <span class="o">+</span> <span class="p">[</span><span class="n">tokenizer</span><span class="p">.</span><span class="n">pad_token_id</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">MAX_SEQUENCE_LENGTH</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids_q</span><span class="p">)))[:</span><span class="n">MAX_SEQUENCE_LENGTH</span><span class="p">]</span>
+         <span class="n">token_type_ids</span> <span class="o">=</span> <span class="p">([</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">MAX_SEQUENCE_LENGTH</span><span class="p">)[:</span><span class="n">MAX_SEQUENCE_LENGTH</span><span class="p">]</span>
+         <span class="n">attention_mask</span> <span class="o">=</span> <span class="p">([</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids_q</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">MAX_SEQUENCE_LENGTH</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids_q</span><span class="p">)))[:</span><span class="n">MAX_SEQUENCE_LENGTH</span><span class="p">]</span>
+
+         <span class="k">return</span> <span class="n">padded_ids</span><span class="p">,</span> <span class="n">token_type_ids</span><span class="p">,</span> <span class="n">attention_mask</span>
+
+     <span class="k">else</span><span class="p">:</span>
+         <span class="n">question</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"</span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s"> [SEP] </span><span class="si">{</span><span class="n">question</span><span class="si">}</span><span class="s">"</span>
+         <span class="n">question_tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+         <span class="n">answer_tokens</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="n">tokenize</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+         <span class="n">question_tokens</span><span class="p">,</span> <span class="n">answer_tokens</span> <span class="o">=</span> <span class="n">fix_length</span><span class="p">(</span><span class="n">tokens</span><span class="o">=</span><span class="p">(</span><span class="n">question_tokens</span><span class="p">,</span> <span class="n">answer_tokens</span><span class="p">),</span> <span class="n">model_type</span><span class="o">=</span><span class="n">model_type</span><span class="p">)</span>
+         <span class="n">ids</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="n">convert_tokens_to_ids</span><span class="p">([</span><span class="s">"[CLS]"</span><span class="p">]</span> <span class="o">+</span> <span class="n">question_tokens</span> <span class="o">+</span> <span class="p">[</span><span class="s">"[SEP]"</span><span class="p">]</span> <span class="o">+</span> <span class="n">answer_tokens</span> <span class="o">+</span> <span class="p">[</span><span class="s">"[SEP]"</span><span class="p">])</span>
+         <span class="n">padded_ids</span> <span class="o">=</span> <span class="n">ids</span> <span class="o">+</span> <span class="p">[</span><span class="n">tokenizer</span><span class="p">.</span><span class="n">pad_token_id</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">MAX_SEQUENCE_LENGTH</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">))</span>
+         <span class="n">token_type_ids</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">question_tokens</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">answer_tokens</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">MAX_SEQUENCE_LENGTH</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">))</span>
+         <span class="n">attention_mask</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="p">(</span><span class="n">MAX_SEQUENCE_LENGTH</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">ids</span><span class="p">))</span>
+
+         <span class="k">return</span> <span class="n">padded_ids</span><span class="p">,</span> <span class="n">token_type_ids</span><span class="p">,</span> <span class="n">attention_mask</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Finally, here is the function that makes use of the function initialized above and generates <strong>input_ids, attention_masks,</strong> and <strong>token_type_ids</strong> for each of the instances in the provided data.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="code"><pre><span class="c1"># function for creating the input_ids, masks and segments for the transformer input
+</span><span class="k">def</span> <span class="nf">input_data</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s">'questions'</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'generating </span><span class="si">{</span><span class="n">model_type</span><span class="si">}</span><span class="s"> input for transformer...'</span><span class="p">)</span>
+    <span class="n">input_ids</span><span class="p">,</span> <span class="n">input_token_type_ids</span><span class="p">,</span> <span class="n">input_attention_masks</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">title</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">answer</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s">"question_title"</span><span class="p">].</span><span class="n">values</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s">"question_body"</span><span class="p">].</span><span class="n">values</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s">"answer"</span><span class="p">].</span><span class="n">values</span><span class="p">)):</span>
+        <span class="n">ids</span><span class="p">,</span> <span class="n">type_ids</span><span class="p">,</span> <span class="n">mask</span> <span class="o">=</span> <span class="n">transformer_inputs</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="n">model_type</span><span class="p">)</span>
+        <span class="n">input_ids</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
+        <span class="n">input_token_type_ids</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">type_ids</span><span class="p">)</span>
+        <span class="n">input_attention_masks</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">mask</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">input_ids</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">int32</span><span class="p">),</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">input_attention_masks</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">int32</span><span class="p">),</span>
+        <span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">input_token_type_ids</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="p">.</span><span class="n">int32</span><span class="p">))</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>To make the model training easy, I also created a class that generates train and cross-validation data based on the fold while using KFlod CV with the help of the functions specified above.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+</pre></td><td class="code"><pre> <span class="k">class</span> <span class="nc">data_generator</span><span class="p">:</span>
+   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">type_</span><span class="p">):</span>
+       <span class="c1"># test data
+</span>       <span class="n">tokens</span><span class="p">,</span> <span class="n">masks</span><span class="p">,</span> <span class="n">segments</span> <span class="o">=</span> <span class="n">input_data</span><span class="p">(</span><span class="n">X_test</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">type_</span><span class="p">)</span>
+       <span class="bp">self</span><span class="p">.</span><span class="n">test_data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'input_tokens'</span><span class="p">:</span> <span class="n">tokens</span><span class="p">,</span>
+                         <span class="s">'input_mask'</span><span class="p">:</span> <span class="n">masks</span><span class="p">,</span>
+                         <span class="s">'input_segment'</span><span class="p">:</span> <span class="n">segments</span><span class="p">}</span>
+
+       <span class="c1"># Train data
+</span>       <span class="bp">self</span><span class="p">.</span><span class="n">tokens</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">masks</span><span class="p">,</span> <span class="bp">self</span><span class="p">.</span><span class="n">segments</span> <span class="o">=</span> <span class="n">input_data</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">type_</span><span class="p">)</span>
+   <span class="k">def</span> <span class="nf">generate_data</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'xlnet-base-cased'</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s">'questions'</span><span class="p">):</span>
+       <span class="k">if</span> <span class="n">name</span><span class="o">!=</span><span class="s">'xlnet-base-cased'</span><span class="p">:</span>
+           <span class="n">train_data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'input_tokens'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">tokens</span><span class="p">[</span><span class="n">tr</span><span class="p">],</span>
+                         <span class="s">'input_mask'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">masks</span><span class="p">[</span><span class="n">tr</span><span class="p">],</span>
+                         <span class="s">'input_segment'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">segments</span><span class="p">[</span><span class="n">tr</span><span class="p">]}</span>
+
+           <span class="n">cv_data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'input_tokens'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">tokens</span><span class="p">[</span><span class="n">cv</span><span class="p">],</span>
+                     <span class="s">'input_mask'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">masks</span><span class="p">[</span><span class="n">cv</span><span class="p">],</span>
+                     <span class="s">'input_segment'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">segments</span><span class="p">[</span><span class="n">cv</span><span class="p">]}</span>
+       <span class="k">else</span><span class="p">:</span>
+           <span class="n">train_data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'input_tokens'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">tokens</span><span class="p">[</span><span class="n">tr</span><span class="p">],</span>
+                         <span class="s">'input_mask'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">masks</span><span class="p">[</span><span class="n">tr</span><span class="p">]}</span>
+
+           <span class="n">cv_data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'input_tokens'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">tokens</span><span class="p">[</span><span class="n">cv</span><span class="p">],</span>
+                     <span class="s">'input_mask'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">masks</span><span class="p">[</span><span class="n">cv</span><span class="p">]}</span>
+
+       <span class="k">if</span> <span class="n">model_type</span><span class="o">==</span><span class="s">'questions'</span><span class="p">:</span>
+           <span class="n">y_tr</span> <span class="o">=</span> <span class="n">y</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">tr</span><span class="p">,</span> <span class="mi">21</span><span class="p">:]</span>
+           <span class="n">y_cv</span> <span class="o">=</span> <span class="n">y</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">cv</span><span class="p">,</span> <span class="mi">21</span><span class="p">:]</span>
+
+       <span class="k">elif</span> <span class="n">model_type</span><span class="o">==</span><span class="s">'answers'</span><span class="p">:</span>
+           <span class="n">y_tr</span> <span class="o">=</span> <span class="n">y</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">tr</span><span class="p">,</span> <span class="mi">21</span><span class="p">:]</span>
+           <span class="n">y_cv</span> <span class="o">=</span> <span class="n">y</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">cv</span><span class="p">,</span> <span class="mi">21</span><span class="p">:]</span>
+
+       <span class="k">else</span><span class="p">:</span>
+           <span class="n">y_tr</span> <span class="o">=</span> <span class="n">y</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">tr</span><span class="p">]</span>
+           <span class="n">y_cv</span> <span class="o">=</span> <span class="n">y</span><span class="p">.</span><span class="n">values</span><span class="p">[</span><span class="n">cv</span><span class="p">]</span>  
+
+       <span class="k">return</span> <span class="n">train_data</span><span class="p">,</span> <span class="n">cv_data</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">y_cv</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<blockquote>
+  <p><strong>Ensembling</strong></p>
+</blockquote>
+
+<p>After data preprocessing, let’s create the model architecture starting with base learners.</p>
+
+<p>The code below takes the model name as input, collects the pre-trained model, and its configuration information according to the input name and creates the base learner model. Notice that <strong>output_hidden_states=True</strong> is passed after adding the config data.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre> <span class="k">def</span> <span class="nf">get_model</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+     <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s">'xlnet-base-cased'</span><span class="p">:</span>
+         <span class="n">config</span> <span class="o">=</span> <span class="n">XLNetConfig</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">'xlnet-base-cased'</span><span class="p">,</span> <span class="n">output_hidden_states</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+         <span class="n">model</span> <span class="o">=</span> <span class="n">TFXLNetModel</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">'xlnet-base-cased'</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+     <span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s">'roberta-base'</span><span class="p">:</span>
+         <span class="n">config</span> <span class="o">=</span> <span class="n">RobertaConfig</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">'roberta-base'</span><span class="p">,</span> <span class="n">output_hidden_states</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+         <span class="n">model</span> <span class="o">=</span> <span class="n">TFRobertaModel</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">'roberta-base'</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+     <span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s">'bert-base-uncased'</span><span class="p">:</span>
+         <span class="n">config</span> <span class="o">=</span> <span class="n">BertConfig</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">'bert-base-uncased'</span><span class="p">,</span> <span class="n">output_hidden_states</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+         <span class="n">model</span> <span class="o">=</span> <span class="n">TFBertModel</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">'bert-base-uncased'</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">config</span><span class="p">)</span>
+     <span class="k">return</span> <span class="n">model</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>The next code block is to create the ensemble architecture. The function accepts 2 parameters name that expects the name of the model that we want to train and model_type that expects the type of model we want to train. The model type can be <strong>bert-base-uncased, roberta-base</strong> or <strong>xlnet-base-cased</strong> whereas the model type can be <strong>questions, answers,</strong> or <strong>question_answers.</strong>
+The function <strong>create_model()</strong> takes the model_name and model_type and generates a model that can be trained on the specified data accordingly.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+</pre></td><td class="code"><pre> <span class="k">def</span> <span class="nf">create_model</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s">'xlnet-base-cased'</span><span class="p">,</span> <span class="n">model_type</span><span class="o">=</span><span class="s">'questions'</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'creating model </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">...'</span><span class="p">)</span>
+     <span class="c1"># Creating the model
+</span>     <span class="n">K</span><span class="p">.</span><span class="n">clear_session</span><span class="p">()</span>
+     <span class="n">max_seq_length</span> <span class="o">=</span> <span class="mi">512</span>
+
+     <span class="n">input_tokens</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">max_seq_length</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"input_tokens"</span><span class="p">)</span>
+     <span class="n">input_mask</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">max_seq_length</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"input_mask"</span><span class="p">)</span>
+     <span class="n">input_segment</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">max_seq_length</span><span class="p">,),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="p">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"input_segment"</span><span class="p">)</span>
+
+     <span class="n">model</span> <span class="o">=</span> <span class="n">get_model</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s">'xlnet-base-cased'</span><span class="p">):</span>
+       <span class="n">sequence_output</span><span class="p">,</span> <span class="n">hidden_states</span> <span class="o">=</span> <span class="n">model</span><span class="p">([</span><span class="n">input_tokens</span><span class="p">,</span> <span class="n">input_mask</span><span class="p">])</span>
+     <span class="k">elif</span> <span class="p">(</span><span class="n">name</span><span class="o">==</span><span class="s">'roberta-base'</span> <span class="ow">and</span> <span class="n">model_type</span><span class="o">!=</span><span class="s">'questions'</span><span class="p">):</span>
+       <span class="n">sequence_output</span><span class="p">,</span> <span class="n">pooler_output</span><span class="p">,</span> <span class="n">hidden_states</span> <span class="o">=</span> <span class="n">model</span><span class="p">([</span><span class="n">input_tokens</span><span class="p">,</span> <span class="n">input_mask</span><span class="p">])</span>
+     <span class="k">else</span><span class="p">:</span>
+       <span class="n">sequence_output</span><span class="p">,</span> <span class="n">pooler_output</span><span class="p">,</span> <span class="n">hidden_states</span> <span class="o">=</span> <span class="n">model</span><span class="p">([</span><span class="n">input_tokens</span><span class="p">,</span> <span class="n">input_mask</span><span class="p">,</span> <span class="n">input_segment</span><span class="p">])</span>
+
+     <span class="c1"># Last 4 hidden layers of transformer
+</span>     <span class="n">h12</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">hidden_states</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">768</span><span class="p">))</span>
+     <span class="n">h11</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">hidden_states</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">768</span><span class="p">))</span>
+     <span class="n">h10</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">hidden_states</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">768</span><span class="p">))</span>
+     <span class="n">h09</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">hidden_states</span><span class="p">[</span><span class="o">-</span><span class="mi">4</span><span class="p">][:,</span><span class="mi">0</span><span class="p">],(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">768</span><span class="p">))</span>
+     <span class="n">concat_hidden</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">layers</span><span class="p">.</span><span class="n">Concatenate</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)([</span><span class="n">h12</span><span class="p">,</span> <span class="n">h11</span><span class="p">,</span> <span class="n">h10</span><span class="p">,</span> <span class="n">h09</span><span class="p">])</span>
+
+     <span class="n">x</span> <span class="o">=</span> <span class="n">GlobalAveragePooling1D</span><span class="p">()(</span><span class="n">concat_hidden</span><span class="p">)</span>
+
+     <span class="n">x</span> <span class="o">=</span> <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+
+     <span class="k">if</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s">'answers'</span><span class="p">:</span>
+       <span class="n">output</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'sigmoid'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+     <span class="k">elif</span> <span class="n">model_type</span> <span class="o">==</span> <span class="s">'questions'</span><span class="p">:</span>
+       <span class="n">output</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'sigmoid'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+     <span class="k">else</span><span class="p">:</span>
+       <span class="n">output</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s">'sigmoid'</span><span class="p">)(</span><span class="n">x</span><span class="p">)</span>
+
+     <span class="k">if</span> <span class="p">(</span><span class="n">name</span> <span class="o">==</span> <span class="s">'xlnet-base-cased'</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">name</span><span class="o">==</span><span class="s">'roberta-base'</span> <span class="ow">and</span> <span class="n">model_type</span><span class="o">!=</span><span class="s">'questions'</span><span class="p">):</span>
+       <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">input_tokens</span><span class="p">,</span> <span class="n">input_mask</span><span class="p">],</span> <span class="n">outputs</span><span class="o">=</span><span class="n">output</span><span class="p">)</span>
+     <span class="k">else</span><span class="p">:</span>
+       <span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">input_tokens</span><span class="p">,</span> <span class="n">input_mask</span><span class="p">,</span> <span class="n">input_segment</span><span class="p">],</span> <span class="n">outputs</span><span class="o">=</span><span class="n">output</span><span class="p">)</span>
+
+     <span class="k">return</span> <span class="n">model</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Now let’s create a function for calculating the evaluation metric <a href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman’s correlation coefficient</a>.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre> <span class="c1"># Function to calculate the Spearman's rank correlation coefficient 'rhos' of actual and predicted data.
+</span> <span class="k">def</span> <span class="nf">compute_spearmanr_ignore_nan</span><span class="p">(</span><span class="n">trues</span><span class="p">,</span> <span class="n">preds</span><span class="p">):</span>
+     <span class="n">rhos</span> <span class="o">=</span> <span class="p">[]</span>
+     <span class="k">for</span> <span class="n">tcol</span><span class="p">,</span> <span class="n">pcol</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">trues</span><span class="p">),</span> <span class="n">np</span><span class="p">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">preds</span><span class="p">)):</span>
+         <span class="n">rhos</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">spearmanr</span><span class="p">(</span><span class="n">tcol</span><span class="p">,</span> <span class="n">pcol</span><span class="p">).</span><span class="n">correlation</span><span class="p">)</span>
+     <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">rhos</span><span class="p">)</span>
+
+ <span class="c1"># Making the 'rhos' metric to tensorflow graph compatible.
+</span> <span class="k">def</span> <span class="nf">rhos</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+     <span class="k">return</span> <span class="n">tf</span><span class="p">.</span><span class="n">py_function</span><span class="p">(</span><span class="n">compute_spearmanr_ignore_nan</span><span class="p">,</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">),</span> <span class="n">tf</span><span class="p">.</span><span class="n">double</span><span class="p">)</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Now we need a function that can collect the base learner model, data according to the base learner model, and train the model.
+I’ve used K-Fold cross-validation with 5 folds for training.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre> <span class="k">def</span> <span class="nf">fit_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">model_type</span><span class="p">,</span> <span class="n">data_gen</span><span class="p">,</span> <span class="n">file_path</span><span class="p">,</span> <span class="n">train</span><span class="p">,</span> <span class="n">use_saved_weights</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+   <span class="n">path</span> <span class="o">=</span> <span class="s">'../input/google-qna-predicted-data/'</span>
+   <span class="k">if</span> <span class="n">use_saved_weights</span><span class="p">:</span>
+     <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'getting saved weights for </span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s">...'</span><span class="p">)</span>
+     <span class="n">model</span><span class="p">.</span><span class="n">load_weights</span><span class="p">(</span><span class="n">path</span><span class="o">+</span><span class="n">file_path</span><span class="p">)</span>
+
+   <span class="k">else</span><span class="p">:</span>
+     <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'fitting data on </span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s">...'</span><span class="p">)</span>
+     <span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">optimizers</span><span class="p">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.00002</span><span class="p">)</span>
+     <span class="n">model</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">'binary_crossentropy'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">rhos</span><span class="p">])</span>
+     <span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+     <span class="k">for</span> <span class="n">tr</span><span class="p">,</span> <span class="n">cv</span> <span class="ow">in</span> <span class="n">kf</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="n">train</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+       <span class="n">tr_data</span><span class="p">,</span> <span class="n">cv_data</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">y_cv</span> <span class="o">=</span> <span class="n">data_gen</span><span class="p">.</span><span class="n">generate_data</span><span class="p">(</span><span class="n">tr</span><span class="p">,</span> <span class="n">cv</span><span class="p">,</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">model_type</span><span class="p">)</span>
+       <span class="n">model</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tr_data</span><span class="p">,</span> <span class="n">y_tr</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">cv_data</span><span class="p">,</span> <span class="n">y_cv</span><span class="p">))</span>
+       <span class="n">model</span><span class="p">.</span><span class="n">save_weights</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+
+   <span class="k">return</span> <span class="n">model</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Now once we have trained the models and generated the predicted values, we need a function for calculating the weighted average. Here’s the code for that.
+*The weight’s in the weighted average are all 1s.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="code"><pre> <span class="k">def</span> <span class="nf">get_weighted_avg</span><span class="p">(</span><span class="n">model_predictions</span><span class="p">):</span>
+   <span class="n">xlnet_q</span><span class="p">,</span> <span class="n">xlnet_a</span><span class="p">,</span> <span class="n">roberta_q</span><span class="p">,</span> <span class="n">roberta_a</span><span class="p">,</span> <span class="n">roberta_qa</span><span class="p">,</span> <span class="n">bert_q</span><span class="p">,</span> <span class="n">bert_a</span><span class="p">,</span> <span class="n">bert_qa</span> <span class="o">=</span> <span class="n">model_predictions</span>
+   <span class="n">xlnet_concat</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">xlnet_q</span><span class="p">,</span> <span class="n">xlnet_a</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">bert_concat</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">bert_q</span><span class="p">,</span> <span class="n">bert_a</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">roberta_concat</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">roberta_q</span><span class="p">,</span> <span class="n">roberta_a</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+   <span class="n">predict</span> <span class="o">=</span> <span class="p">(</span><span class="n">roberta_qa</span> <span class="o">+</span> <span class="n">bert_qa</span> <span class="o">+</span> <span class="n">xlnet_concat</span> <span class="o">+</span> <span class="n">bert_concat</span> <span class="o">+</span> <span class="n">roberta_concat</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span>
+
+   <span class="k">return</span> <span class="n">predict</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Before bringing everything together, there is one more function that I used for processing the final predicted values. Remember in the EDA section there was an analysis of the target values where we noticed that the target values were only 25 unique floats between 0 and 1. To make use of that information, I calculated 61 (a hyperparameter) uniformly distributed percentile values and mapped them to the 25 unique values. This created 61 bins uniformly spaced between the upper and lower range of the target values. Now to process the predicted data, I used those bins to collect the predicted values and put them in the right place/order. This trick helped in improving the score in the final submission to the leaderboard to some extent.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="code"><pre> <span class="c1"># https://www.kaggle.com/markpeng/ensemble-5models-v4-v7-magic/notebook?select=submission.csv#Do-Inference
+</span> <span class="k">def</span> <span class="nf">get_exp_labels</span><span class="p">(</span><span class="n">train</span><span class="p">):</span>
+     <span class="n">X</span> <span class="o">=</span> <span class="n">train</span><span class="p">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">11</span><span class="p">:]</span>
+     <span class="n">unique_labels</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">unique</span><span class="p">(</span><span class="n">X</span><span class="p">.</span><span class="n">values</span><span class="p">)</span>
+     <span class="n">denominator</span> <span class="o">=</span> <span class="mi">60</span>
+     <span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">denominator</span><span class="p">)</span>
+     <span class="n">exp_labels</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">unique_labels</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span> <span class="c1"># Generating the 60 bins.
+</span>     <span class="k">return</span> <span class="n">exp_labels</span>
+
+ <span class="k">def</span> <span class="nf">optimize_ranks</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">unique_labels</span><span class="p">):</span>
+     <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'optimizing the predicted values...'</span><span class="p">)</span>
+     <span class="n">new_preds</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">preds</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span>
+     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">preds</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+         <span class="n">interpolate_bins</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">preds</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="n">unique_labels</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">unique</span><span class="p">(</span><span class="n">interpolate_bins</span><span class="p">))</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+             <span class="n">new_preds</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">preds</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span>
+         <span class="k">else</span><span class="p">:</span>
+             <span class="n">new_preds</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">unique_labels</span><span class="p">[</span><span class="n">interpolate_bins</span><span class="p">]</span>
+
+     <span class="k">return</span> <span class="n">new_preds</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Finally, to bring the data-preprocessing, model training, and post-processing together, I created the <strong>get_predictions()</strong> function that-</p>
+<ul>
+  <li>Collects the data.</li>
+  <li>Creates the 8 base_learners.</li>
+  <li>Prepares the data for the base_learners.</li>
+  <li>Trains the base learners and collects the predicted values from them.</li>
+  <li>Calculates the weighted average of the predicted values.</li>
+  <li>Processes the weighted average prediction.</li>
+  <li>Converts the final predicted values into a dataframe format requested by Kaggle for submission and return it.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+</pre></td><td class="code"><pre> <span class="k">def</span> <span class="nf">get_predictions</span><span class="p">(</span><span class="n">predictions_present</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">model_saved_weights_present</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+   <span class="n">msw</span> <span class="o">=</span> <span class="n">model_saved_weights_present</span>
+   <span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">()</span>
+   <span class="n">path</span> <span class="o">=</span> <span class="s">'../input/google-qna-predicted-data/'</span>
+   <span class="n">model_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">'xlnet-base-cased'</span><span class="p">,</span> <span class="s">'roberta-base'</span><span class="p">,</span> <span class="s">'bert-base-uncased'</span><span class="p">]</span>
+   <span class="n">model_types</span> <span class="o">=</span> <span class="p">[</span><span class="s">'questions'</span><span class="p">,</span> <span class="s">'answers'</span><span class="p">,</span> <span class="s">'questions_answers'</span><span class="p">]</span>
+   <span class="n">saved_weights_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">'xlnet_q.h5'</span><span class="p">,</span> <span class="s">'xlnet_a.h5'</span><span class="p">,</span> <span class="s">'roberta_q.h5'</span><span class="p">,</span> <span class="s">'roberta_a.h5'</span><span class="p">,</span>
+                         <span class="s">'roberta_qa.h5'</span><span class="p">,</span> <span class="s">'bert_q.h5'</span><span class="p">,</span> <span class="s">'bert_a.h5'</span><span class="p">,</span> <span class="s">'bert_qa.h5'</span><span class="p">]</span>
+
+   <span class="n">saved_model_predictions</span> <span class="o">=</span> <span class="p">[</span><span class="n">path</span><span class="o">+</span><span class="s">'xlnet_q.csv'</span><span class="p">,</span> <span class="n">path</span><span class="o">+</span><span class="s">'xlnet_a.csv'</span><span class="p">,</span> <span class="n">path</span><span class="o">+</span><span class="s">'roberta_q.csv'</span><span class="p">,</span> <span class="n">path</span><span class="o">+</span><span class="s">'roberta_a.csv'</span><span class="p">,</span>
+                               <span class="n">path</span><span class="o">+</span><span class="s">'roberta_qa.csv'</span><span class="p">,</span> <span class="n">path</span><span class="o">+</span><span class="s">'bert_q.csv'</span><span class="p">,</span> <span class="n">path</span><span class="o">+</span><span class="s">'bert_a.csv'</span><span class="p">,</span> <span class="n">path</span><span class="o">+</span><span class="s">'bert_qa.csv'</span><span class="p">]</span>
+   <span class="n">model_predictions</span> <span class="o">=</span> <span class="p">[]</span>
+
+   <span class="k">if</span> <span class="n">predictions_present</span><span class="p">:</span>
+     <span class="n">model_predictions</span> <span class="o">=</span> <span class="p">[</span><span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_name</span><span class="p">).</span><span class="n">values</span> <span class="k">for</span> <span class="n">file_name</span> <span class="ow">in</span> <span class="n">saved_model_predictions</span><span class="p">]</span>
+
+   <span class="k">else</span><span class="p">:</span>
+     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+     <span class="k">for</span> <span class="n">name_</span> <span class="ow">in</span> <span class="n">model_names</span><span class="p">:</span>
+       <span class="k">for</span> <span class="n">type_</span> <span class="ow">in</span> <span class="n">model_types</span><span class="p">:</span>
+         <span class="k">if</span> <span class="n">name_</span> <span class="o">==</span> <span class="s">'xlnet-base-cased'</span> <span class="ow">and</span> <span class="n">type_</span> <span class="o">==</span> <span class="s">'questions_answers'</span><span class="p">:</span>
+           <span class="k">continue</span>
+         <span class="k">print</span><span class="p">(</span><span class="s">'-'</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+         <span class="n">model</span> <span class="o">=</span> <span class="n">create_model</span><span class="p">(</span><span class="n">name_</span><span class="p">,</span> <span class="n">type_</span><span class="p">)</span>
+         <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">get_tokenizer</span><span class="p">(</span><span class="n">name_</span><span class="p">)</span>
+         <span class="n">data_gen</span> <span class="o">=</span> <span class="n">data_generator</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">tokenizer</span><span class="p">,</span> <span class="n">type_</span><span class="p">)</span>
+         <span class="n">model</span> <span class="o">=</span> <span class="n">fit_model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">name_</span><span class="p">,</span> <span class="n">type_</span><span class="p">,</span> <span class="n">data_gen</span><span class="p">,</span> <span class="n">saved_weights_names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">train</span><span class="p">,</span> <span class="n">msw</span><span class="p">)</span>
+         <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'getting target predictions from </span><span class="si">{</span><span class="n">name_</span><span class="si">}</span><span class="s">...'</span><span class="p">)</span>
+         <span class="n">model_predictions</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data_gen</span><span class="p">.</span><span class="n">test_data</span><span class="p">))</span>
+         <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+
+   <span class="n">predicted_labels</span> <span class="o">=</span> <span class="n">get_weighted_avg</span><span class="p">(</span><span class="n">model_predictions</span><span class="p">)</span>
+   <span class="n">exp_labels</span> <span class="o">=</span> <span class="n">get_exp_labels</span><span class="p">(</span><span class="n">train</span><span class="p">)</span>
+   <span class="n">optimized_predicted_labels</span> <span class="o">=</span> <span class="n">optimize_ranks</span><span class="p">(</span><span class="n">predicted_labels</span><span class="p">,</span> <span class="n">exp_labels</span><span class="p">)</span>
+   <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">concat</span><span class="p">([</span><span class="n">test</span><span class="p">[</span><span class="s">'qa_id'</span><span class="p">],</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">optimized_predicted_labels</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">train</span><span class="p">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">11</span><span class="p">:])],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+   <span class="k">print</span><span class="p">(</span><span class="s">'done...!'</span><span class="p">)</span>
+
+   <span class="k">return</span> <span class="n">df</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<blockquote>
+  <p><strong>Getting the scores from Kaggle</strong></p>
+</blockquote>
+
+<p>Once the code compiles and runs successfully, it generates an output file that can be submitted to Kaggle for <strong>score</strong> calculation. The ranking of the code on the leaderboard is generated using the <strong>score.</strong>
+The ensemble model got a public score of <strong>0.43658</strong> which makes it in the top 4.4% on the leaderboard.</p>
+
+<p><img src="" alt="" /></p>
+<h2 id="post-modeling-analysis">Post modeling Analysis</h2>
+
+<p><strong><em>Check-out the notebook with complete post-modeling analysis (<a href="https://www.kaggle.com/sarthakvajpayee/top-4-4-post-modeling-analysis?scriptVersionId=40262842">Kaggle link</a>).</em></strong></p>
+
+<p><img src="" alt="" /></p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/4320/1*7gTtCiVIl_oCN6Wpq4R-9g.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+Its time for some post-modeling analysis!</p>
+
+<p>In this section, we will go through an analysis of train data to figure out what parts of the data is the model doing well on and what parts of the data it’s not.
+The main idea behind this step is to know the capability of the trained model and it works like a charm if applied properly for fine-tuning the model and data.
+But we won’t get into the fine-tuning part in this section, we will just be performing some basic EDA on the train data using the predicted target values for the train data.
+I’ll be covering the data feature by feature. Here are the top features we’ll be performing analysis on-</p>
+
+<ul>
+  <li>
+    <p>question_title, question_body, and answer.</p>
+  </li>
+  <li>
+    <p>Word lengths of question_title, question_body, and answer.</p>
+  </li>
+  <li>
+    <p>Host</p>
+  </li>
+  <li>
+    <p>Category</p>
+  </li>
+</ul>
+
+<p>First, we will have to divide the data into a spectrum of good data and bad data. Good data will be the data points on which the model achieves a good score and bad data will be the data points on which the model achieves a bad score.
+Now for scoring, we will be comparing the actual target values of the train data with the model’s predicted target values on train data. I used <strong>mean squared error (MSE)</strong> as a metric for scoring since it focuses on how close the actual and target values are. Remember the more the MSE-score is, the bad the data point will be.
+Calculating the MSE-score is pretty simple. Here’s the code:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Generating the MSE-score for each data point in train data.
+from sklearn.metrics import mean_squared_error
+
+train_score = [mean_squared_error(i,j) for i,j in zip(y_pred, y_true)]
+
+# sorting the losses from minimum to maximum index wise.
+train_score_args = np.argsort(train_score)
+</code></pre></div></div>
+
+<p><img src="" alt="" /></p>
+<blockquote>
+  <p><strong>question_title, question_body, and answer</strong></p>
+</blockquote>
+
+<p>Starting with the first set of features, which are all text type features, I’ll be plotting word clouds using them. The plan is to segment out these features from 5 data-points that have the least scores and from another 5 data-points that have the most scores.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="code"><pre> <span class="c1"># function for generating wordcloud
+</span> <span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span><span class="p">,</span> <span class="n">STOPWORDS</span>
+ <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
+ <span class="n">sns</span><span class="p">.</span><span class="nb">set</span><span class="p">()</span>
+
+ <span class="k">def</span> <span class="nf">generate_wordcloud</span><span class="p">(</span><span class="n">indexes</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'black'</span><span class="p">):</span>
+   <span class="n">comment_words</span> <span class="o">=</span> <span class="s">''</span>
+   <span class="n">stopwords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">STOPWORDS</span><span class="p">)</span>
+
+   <span class="n">title_words</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'question_title'</span><span class="p">].</span><span class="n">iloc</span><span class="p">[</span><span class="n">indexes</span><span class="p">]</span>
+   <span class="n">body_words</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'question_body'</span><span class="p">].</span><span class="n">iloc</span><span class="p">[</span><span class="n">indexes</span><span class="p">]</span>
+   <span class="n">answer_words</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'answer'</span><span class="p">].</span><span class="n">iloc</span><span class="p">[</span><span class="n">indexes</span><span class="p">]</span>
+
+   <span class="n">title_cloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">background_color</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span>
+                         <span class="n">stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="p">,</span> <span class="n">min_font_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">).</span><span class="n">generate</span><span class="p">(</span><span class="n">title_words</span><span class="p">)</span>
+
+   <span class="n">body_cloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">background_color</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span>
+                         <span class="n">stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="p">,</span> <span class="n">min_font_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">).</span><span class="n">generate</span><span class="p">(</span><span class="n">body_words</span><span class="p">)</span>
+
+   <span class="n">answer_cloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">background_color</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span>
+                         <span class="n">stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="p">,</span> <span class="n">min_font_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">).</span><span class="n">generate</span><span class="p">(</span><span class="n">answer_words</span><span class="p">)</span>
+
+   <span class="k">return</span> <span class="n">title_cloud</span><span class="p">,</span> <span class="n">body_cloud</span><span class="p">,</span> <span class="n">answer_cloud</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Let’s run the code and check what the results look like.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre> <span class="c1"># I've picked the top 5 datapoints from train data with lowest loss and plotted the wordcloud of their question_title, question_body and answer.
+</span> <span class="k">print</span><span class="p">(</span><span class="s">'Top 5 data points from train data that give the "lowest" loss.'</span><span class="p">)</span>
+ <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">train_score_args</span><span class="p">[:</span><span class="mi">5</span><span class="p">]):</span>
+   <span class="n">title</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">answer</span> <span class="o">=</span> <span class="n">generate_wordcloud</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">X_train</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'question_title'</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s">'loss: </span><span class="si">{</span><span class="n">train_score</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'question_body'</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'answer'</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">setp</span><span class="p">(</span><span class="n">plt</span><span class="p">.</span><span class="n">gcf</span><span class="p">().</span><span class="n">get_axes</span><span class="p">(),</span> <span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[]);</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2572/1*5lOfSHKyTTV3YhsU4PxaDQ.png" />
+    </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre> <span class="c1"># I've picked the top 5 datapoints from train data with 'highest' loss and plotted the wordcloud of their question_title, question_body and answer.
+</span> <span class="k">print</span><span class="p">(</span><span class="s">'Top 5 data points from Train data that give the "highest" loss.'</span><span class="p">)</span>
+ <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">train_score_args</span><span class="p">[</span><span class="o">-</span><span class="mi">5</span><span class="p">:]):</span>
+   <span class="n">title</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">answer</span> <span class="o">=</span> <span class="n">generate_wordcloud</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'white'</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'question_title'</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s">'loss: </span><span class="si">{</span><span class="n">train_score</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'question_body'</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+   <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'answer'</span><span class="p">)</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">setp</span><span class="p">(</span><span class="n">plt</span><span class="p">.</span><span class="n">gcf</span><span class="p">().</span><span class="n">get_axes</span><span class="p">(),</span> <span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[]);</span>
+   <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2676/1*pUtWG5KWy_c34dLGH2qJgA.png" />
+    </div>
+</div>
+<blockquote>
+  <p><strong>Word lengths of question_title, question_body, and answer</strong></p>
+</blockquote>
+
+<p>The next analysis is on the word lengths of question_title, question_body, and answer. For that, I’ll be picking 30 data-points that have the lowest MSE-scores and 30 data-points that have the highest MSE-scores for each of the 3 features question_title, question_body, and answer. Next, I’ll be calculating the word lengths of these 30 data-points for all the 3 features and plot them to see the trend.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="code"><pre> <span class="c1"># I've picked the top 30 datapoints from train and cv data with 'lowest' loss and plotted the word counts of their question_title, question_body and answer.
+</span> <span class="k">print</span><span class="p">(</span><span class="s">"word counts of the question_title, question_body and answer of top 30 train and cv data with 'lowest' loss."</span><span class="p">)</span>
+ <span class="n">i</span> <span class="o">=</span> <span class="mi">30</span>
+ <span class="n">title_train_len</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">X_train</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[:</span><span class="n">i</span><span class="p">]][</span><span class="s">'question_title'</span><span class="p">].</span><span class="n">values</span><span class="p">]</span>
+ <span class="n">body_train_len</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">X_train</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[:</span><span class="n">i</span><span class="p">]][</span><span class="s">'question_body'</span><span class="p">].</span><span class="n">values</span><span class="p">]</span>
+ <span class="n">answer_train_len</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">X_train</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[:</span><span class="n">i</span><span class="p">]][</span><span class="s">'answer'</span><span class="p">].</span><span class="n">values</span><span class="p">]</span>
+
+ <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title_train_len</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'question_title (train data)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'number of words'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'datapoint (loss: high --&gt; low)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">body_train_len</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'question_body (train data)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'datapoint (loss: low --&gt; high)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">answer_train_len</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'answer (train data)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'datapoint (loss: high --&gt; low)'</span><span class="p">)</span>
+ <span class="c1"># plt.setp(plt.gcf().get_axes(), xticks=[], yticks=[]);
+</span> <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3916/1*zfhNtTvxqVYPJYX1Emq7rA.png" />
+    </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="code"><pre> <span class="c1"># I've picked the top 30 datapoints from train data with 'highest' loss and plotted the word counts of their question_title, question_body and answer.
+</span> <span class="k">print</span><span class="p">(</span><span class="s">"word counts of the question_title, question_body and answer of top 30 train and cv data with 'highest' loss."</span><span class="p">)</span>
+ <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">30</span>
+ <span class="n">title_train_len</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">X_train</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[</span><span class="n">i</span><span class="p">:]][</span><span class="s">'question_title'</span><span class="p">].</span><span class="n">values</span><span class="p">]</span>
+ <span class="n">body_train_len</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">X_train</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[</span><span class="n">i</span><span class="p">:]][</span><span class="s">'question_body'</span><span class="p">].</span><span class="n">values</span><span class="p">]</span>
+ <span class="n">answer_train_len</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">X_train</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[</span><span class="n">i</span><span class="p">:]][</span><span class="s">'answer'</span><span class="p">].</span><span class="n">values</span><span class="p">]</span>
+
+ <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">title_train_len</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'question_title (train data)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'number of words'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'datapoint (loss: high --&gt; low)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">body_train_len</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'question_body (train data)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'datapoint (loss: high --&gt; low)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">133</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">answer_train_len</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'answer (train data)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'datapoint (loss: high --&gt; low)'</span><span class="p">)</span>
+ <span class="c1"># plt.setp(plt.gcf().get_axes(), xticks=[], yticks=[]);
+</span> <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3824/1*uF-kg7A_2geR4UBVJty0Nw.png" />
+    </div>
+</div>
+
+<p><em>If we look at the number of words in question_title, question_body, and answer we can observe that the data that generates a high loss has a high number of words which means that the questions and answers are kind of thorough. So, the model does a good job when the questions and answers are concise.</em></p>
+<blockquote>
+  <p><strong>host</strong></p>
+</blockquote>
+
+<p>The next analysis is on the feature host. For this feature, I’ll be picking 100 data-points that have the lowest MSE-scores and 100 data-points that have the highest MSE-scores and select the values in the feature host. Then I’ll be plotting a histogram of this categorical feature to see the distributions.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="code"><pre> <span class="c1"># I've picked the top 100 datapoints from train data with 'highest' loss and collected the values of domain names.
+</span> <span class="n">top_url</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s">'host'</span><span class="p">].</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[:</span><span class="mi">100</span><span class="p">]].</span><span class="n">value_counts</span><span class="p">()</span>
+ <span class="n">bottom_url</span> <span class="o">=</span> <span class="n">X_train</span><span class="p">[</span><span class="s">'host'</span><span class="p">].</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">:]].</span><span class="n">value_counts</span><span class="p">()</span>
+
+ <span class="c1"># Top 10 frequently occuring domain names that lead to minimum loss
+</span> <span class="n">top_url</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">].</span><span class="n">plot</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'top 10 url domain that produce the minimum loss'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'frequency'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2556/1*JdLsXYflDINgWEOMhWryUw.png" />
+    </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre> <span class="c1"># Top 10 frequently occuring domain names that lead to maximum loss
+</span> <span class="n">bottom_url</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">].</span><span class="n">plot</span><span class="p">.</span><span class="n">bar</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'top 10 url domain that produce the maximum loss'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'frequency'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/2512/1*_-X1hQl1V8nchYotkUORpg.png" />
+    </div>
+</div>
+
+<p><em>We can see that there are a lot of data points from the domain English, biology, sci-fi, physics that contribute to a lesser loss value whereas there are a lot of data points from drupal, programmers, tex that contribute to a higher loss.</em></p>
+
+<p>Let’s also take a look at word-clouds of the unique host values that contribute to a low score and a high score. This analysis is again done using the top and bottom 100 data-points.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre> <span class="c1"># finding the unique domain names that contribute to low and high losses
+</span> <span class="n">best_url</span> <span class="o">=</span> <span class="s">' '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">top_url</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">bottom_url</span><span class="p">.</span><span class="n">keys</span><span class="p">())))</span> <span class="c1"># set of urls that contribute solely to low loss
+</span> <span class="n">worst_url</span> <span class="o">=</span> <span class="s">' '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">bottom_url</span><span class="p">.</span><span class="n">keys</span><span class="p">())</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">top_url</span><span class="p">.</span><span class="n">keys</span><span class="p">())))</span> <span class="c1"># set of urls that contribute solely to high loss
+</span>
+ <span class="n">best_url_cloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">background_color</span> <span class="o">=</span><span class="s">'orange'</span><span class="p">,</span>
+                            <span class="n">stopwords</span> <span class="o">=</span> <span class="n">STOPWORDS</span><span class="p">,</span> <span class="n">min_font_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">).</span><span class="n">generate</span><span class="p">(</span><span class="n">best_url</span><span class="p">)</span>
+
+ <span class="n">worst_url_cloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">background_color</span> <span class="o">=</span><span class="s">'cyan'</span><span class="p">,</span>
+                             <span class="n">stopwords</span> <span class="o">=</span> <span class="n">STOPWORDS</span><span class="p">,</span> <span class="n">min_font_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">).</span><span class="n">generate</span><span class="p">(</span><span class="n">worst_url</span><span class="p">)</span>
+
+ <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">best_url_cloud</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'url domain with well predicted labels (low loss)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">worst_url_cloud</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'url domain with bad predicted labels (high loss)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">setp</span><span class="p">(</span><span class="n">plt</span><span class="p">.</span><span class="n">gcf</span><span class="p">().</span><span class="n">get_axes</span><span class="p">(),</span> <span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[]);</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3660/1*eC0RkpXcA9jhzioVKIXTfQ.png" />
+    </div>
+</div>
+<blockquote>
+  <p><strong>Category</strong></p>
+</blockquote>
+
+<p>The final analysis is on the feature category. For this feature, I’ll be picking 100 data-points that have the lowest MSE-scores and 100 data-points that have the highest MSE-scores and select the values in the feature category. Then I’ll be plotting a pie-chart of this categorical feature to see the proportions.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre> <span class="c1"># for train data
+</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">)</span>
+ <span class="n">X_train</span><span class="p">[</span><span class="s">'category'</span><span class="p">].</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[:</span><span class="mi">100</span><span class="p">]].</span><span class="n">value_counts</span><span class="p">().</span><span class="n">plot</span><span class="p">.</span><span class="n">pie</span><span class="p">(</span><span class="n">autopct</span><span class="o">=</span><span class="s">'%1.1f%%'</span><span class="p">,</span> <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.02</span><span class="p">,</span><span class="mf">0.04</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.08</span><span class="p">),</span> <span class="n">shadow</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'categories of best fitted data points with minimum loss (on train data)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+ <span class="n">X_train</span><span class="p">[</span><span class="s">'category'</span><span class="p">].</span><span class="n">iloc</span><span class="p">[</span><span class="n">train_score_args</span><span class="p">[</span><span class="o">-</span><span class="mi">100</span><span class="p">:]].</span><span class="n">value_counts</span><span class="p">().</span><span class="n">plot</span><span class="p">.</span><span class="n">pie</span><span class="p">(</span><span class="n">autopct</span><span class="o">=</span><span class="s">'%1.1f%%'</span><span class="p">,</span> <span class="n">explode</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.02</span><span class="p">,</span><span class="mf">0.04</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="mf">0.08</span><span class="p">),</span> <span class="n">shadow</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">''</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">'categories of worst fitted data points with maximum loss (on train data)'</span><span class="p">)</span>
+ <span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+ 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-1">
+        <img class="img-fluid rounded z-depth-0" src="https://cdn-images-1.medium.com/max/3660/1*cR2JuXG7-r4_Rq5-yjE8kA.png" />
+    </div>
+</div>
+
+<p><img src="" alt="" />
+We can notice that datapoints with category as technology make up 50% of the data that the model could not predict well whereas categories like LIFE_ARTS, SCIENCE, and CULTURE contribute much less to bad predictions.
+For the good predictions, all the 5 categories contribute almost the same since there is no major difference in the proportion, still, we could say that the data-points with StackOverflow as the category contribute the least.</p>
+
+<p><em>With this, we have come to the end of this blog and the 3 part series. Hope the read was pleasant.
+You can check the complete notebook on Kaggle using [<strong>this link](https://www.kaggle.com/sarthakvajpayee/top-4-4-bert-roberta-xlnet)</strong> and leave an upvote if found my work useful.
+I would like to thank all the creators for creating the awesome content I referred to for writing this blog.</em></p>
+
+<p><em>Reference links:</em></p>
+
+<ul>
+  <li>
+    <p><em>Applied AI Course: <a href="https://www.appliedaicourse.com/">https://www.appliedaicourse.com/</a></em></p>
+  </li>
+  <li>
+    <p><a href="https://www.kaggle.com/c/google-quest-challenge/notebooks">https://www.kaggle.com/c/google-quest-challenge/notebooks</a></p>
+  </li>
+  <li>
+    <p>[<em>http://jalammar.github.io/illustrated-transformer/](http://jalammar.github.io/illustrated-transformer/)</em></p>
+  </li>
+  <li>
+    <p>[<em>https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04](https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04)</em></p>
+  </li>
+  <li>
+    <p><a href="https://towardsdatascience.com/bert-roberta-distilbert-xlnet-which-one-to-use-3d5ab82ba5f8">https://towardsdatascience.com/bert-roberta-distilbert-xlnet-which-one-to-use-3d5ab82ba5f8</a></p>
+    <blockquote>
+      <p><strong>Final note</strong></p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>Thank you for reading the blog. I hope it was useful for some of you aspiring to do projects or learn some new concepts in NLP.</p>
+
+<p>In <a href="https://towardsdatascience.com/transformers-state-of-the-art-natural-language-processing-1d84c4c7462b?source=friends_link&amp;sk=4ba3eb424ff59ce765c749819c6b5892">part 1/3</a> we covered how Transformers became state-of-the-art in various modern natural language processing tasks and their working.</p>
+
+<p>In <a href="https://towardsdatascience.com/understanding-bert-bidirectional-encoder-representations-from-transformers-45ee6cd51eef?source=friends_link&amp;sk=f48ce58edfdf395fe5d86436d8102a61">part 2/3</a> we went through BERT (Bidirectional Encoder Representations from Transformers).</p>
+
+<p>Kaggle in-depth EDA notebook link: <a href="https://www.kaggle.com/sarthakvajpayee/top-4-4-in-depth-eda-feature-scraping?scriptVersionId=40263047">https://www.kaggle.com/sarthakvajpayee/top-4-4-in-depth-eda-feature-scraping?scriptVersionId=40263047</a></p>
+
+<p>Kaggle modeling notebook link: <a href="https://www.kaggle.com/sarthakvajpayee/top-4-4-bert-roberta-xlnet">https://www.kaggle.com/sarthakvajpayee/top-4-4-bert-roberta-xlnet</a></p>
+
+<p>Kaggle post-modeling notebook link: <a href="https://www.kaggle.com/sarthakvajpayee/top-4-4-post-modeling-analysis?scriptVersionId=40262842">https://www.kaggle.com/sarthakvajpayee/top-4-4-post-modeling-analysis?scriptVersionId=40262842</a></p>
+
+<p>Find me on LinkedIn: <a href="http://www.linkedin.com/in/sarthak-vajpayee">www.linkedin.com/in/sarthak-vajpayee</a></p>
+
+<p>Find this project on Github: <a href="https://github.com/SarthakV7/Kaggle_google_quest_challenge">https://github.com/SarthakV7/Kaggle_google_quest_challenge</a></p>
+
+<p>Peace! ☮</p>
+
+  </article>
+
+  
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    &copy; Copyright 2021 Sarthak  Vajpayee.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+
+    
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- Bootsrap & MDB scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/my_folio/assets/js/mansory.js" type="text/javascript"></script>
+
+
+  
+
+
+<!-- Load Common JS -->
+<script src="/my_folio/assets/js/common.js"></script>
+
+
+</html>
