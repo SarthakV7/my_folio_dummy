@@ -17,7 +17,7 @@ social: true  # includes social icons at the bottom of the page
 
 I am a freelance Data Scientist currently working in collaboration with [Stellenbosch University](http://www.sun.ac.za/english){:target="\_blank"} on a research project for diagnosis of COVID-19 through cough audio using deep learning.
 
-I am also working part time at [Applied Roots](https://www.appliedroots.com/){:target="\_blank"}, where, one of the major tasks is mentoring our students, evaluating, debugging their assignments, and giving them the right feedback.
+Apart from freelancing, I am working as an Associate Data Scientist at [Ernst & Young (EY)](https://www.ey.com/en_in){:target="\_blank"} where my day to day tasks involve using quantitative and qualitative methods to test hypotheses, building ML models, and identifying emerging trends related to a range of strategically important business topics. I am also working part time at [Applied Roots](https://www.appliedroots.com/){:target="\_blank"}, where, one of the major tasks is mentoring our students, evaluating, debugging their assignments, and giving them the right feedback.
 I am a part of the team where we evaluate over 600 assignments on an average daily, mentor our students, and resolve queries pertaining Data Science.
 Apart from the evaluation, guidance, and queries resolution, we are also responsible for updating the assignments to keep them in pace with the
 AI/Data Science industry.
